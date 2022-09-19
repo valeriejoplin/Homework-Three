@@ -13,7 +13,7 @@ require_once("header.php");
   <?php
 $servername = "localhost";
 $username = "valeriej_user";
-$password = "3vVv6zGYU2mf";
+$password = "Jackiejack21$";
 $dbname = "valerej_homework3";
 
 // Create connection
