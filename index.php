@@ -21,5 +21,14 @@ $username = "valeriej_user";
 $password = "3vVv6zGYU2mf";
 $dbname = "valerej_homework3";
 
-   
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+                
+$sql = "SELECT instructor_id, instructor_name from instructor";
+$result = $conn->query($sql);
+                
+
+            
 
