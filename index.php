@@ -14,7 +14,7 @@ require_once("header.php");
 $servername = "localhost";
 $username = "valeriej_databaseuser";
 $password = "tI_*dXAL^r[(";
-$dbname = "valerej_homework3";
+$dbname = "valeriej_homework3";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
