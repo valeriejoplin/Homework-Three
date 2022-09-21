@@ -8,6 +8,7 @@ require_once("header.php");
       <th>StudentID</th>
       <th>Name</th>
       <th>Major</th>
+      <th>Minor</th>
       <th>Graduation Date</th>
     </tr>
   </thead>
@@ -24,7 +25,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT StudentID, Name, Major, GradYear from Student";
+$sql = "SELECT StudentID, Name, Major, Minor, GradYear from Student";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -35,6 +36,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["StudentID"]?></td>  
     <td><?=$row["Name"]?></td>  
     <td><?=$row["Major"]?></td>
+    <td><?=$row["Minor"]?></td>
     <td><?=$row["GradYear"]?></td>
   </tr>
 <?php
