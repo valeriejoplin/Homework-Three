@@ -18,13 +18,13 @@
           <a class="nav-link active" aria-current="page" href="index.php">Instructors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Courses</a>
+          <a class="nav-link" href="course.php">Courses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Students</a>
+          <a class="nav-link" href="student.php">Students</a>
         </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">?</a>
+          <a class="nav-link" href="instructor-courses.php">Instructor Courses</a>
         </li>
       </ul>
     </div>
