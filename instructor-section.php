@@ -20,20 +20,16 @@ $username = "valeriej_databaseuser";
 $password = "tI_*dXAL^r[(";
 $dbname = "valeriej_homework3";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
+
+   if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $iid = $_GET['ID'];
-//echo $iid;
 $sql = "select SectionID, Section_Number, Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join course c on c.CourseID = s.CourseID where i.InstructorID=" . $iid;
-//echo $sql;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
