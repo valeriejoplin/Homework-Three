@@ -30,10 +30,10 @@ if ($result->num_rows > 0) {
       <p class="card-text"><?=$row["GradYear"]?><ul>
 <?php
     $student_sql = "select * from Student st where st.StudentID=" . $row["StudentID"];
-    $student_result = $conn->query($section_sql);
+    $student_result = $conn->query($student_sql);
     
-    while($section_row = $student_result->fetch_assoc()) {
-      echo "<li>" . $section_row["Major"] . "</li>";
+    while($student_row = $student_result->fetch_assoc()) {
+      echo "<li>" . $student_row["Major"] . "</li>";
     }
 ?>
       </ul></p>
