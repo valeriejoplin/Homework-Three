@@ -27,13 +27,12 @@ if ($result->num_rows > 0) {
     <div class="card-body">
       <h5 class="card-title"><?=$row["Name"]?></h5>
       <p class="card-text"><?=$row["Major"]?><ul>
-      <p class="card-text"><?=$row["GradYear"]?><ul>
 <?php
     $student_sql = "select * from Student st where st.StudentID=" . $row["StudentID"];
     $student_result = $conn->query($student_sql);
     
     while($student_row = $student_result->fetch_assoc()) {
-      echo "<li>" . $student_row["Major"] . "</li>";
+      echo "<li>" . $student_row["GradYear"] . "</li>";
     }
 ?>
       </ul></p>
