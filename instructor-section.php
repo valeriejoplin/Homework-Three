@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select section_id, section_number, i.Instructor_Name, c.prefix, c.number from section s join Instructor i on i.Instructor_ID = s.Instructor_ID join course c on c.course_id = s.course_id where i.Instructor_ID=" . $iid;
+$sql = "select SectionID, Section_Number, i.Name, c.Prefix, c.Number from section s join Instructor i on i.Instructor_ID = s.Instructor_ID join course c on c.CourseID = s.CourseID where i.Instructor_ID=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
@@ -37,11 +37,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["section_number"]?></td>
-    <td><?=$row["Instructor_name"]?></td>
+    <td><?=$row["SectionID"]?></td>
+    <td><?=$row["Prefix"]?></td>
+    <td><?=$row["Number"]?></td>
+    <td><?=$row["Section_Number"]?></td>
+    <td><?=$row["Instructor_Name"]?></td>
   </tr>
 <?php
   }
