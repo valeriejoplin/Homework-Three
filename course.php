@@ -24,7 +24,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT CourseID, Prefix, Number, Description from Course";
+$sql = "SELECT * from Course";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -36,6 +36,12 @@ if ($result->num_rows > 0) {
     <td><?=$row["Prefix"]?></td>  
     <td><?=$row["Number"]?></td>
     <td><?=$row["Description"]?></td>
+    <td>
+    <form method "post" action="sections.php">
+    <input type"hidden" name "id" value="<?=$row["CourseID"]?>" />
+    <input type="submit" value="Sections" />
+    </form>
+    </td>
   </tr>
 <?php
   }
