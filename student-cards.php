@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["Name"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $student_sql = "select * from Student where st.StudentID=" . $row["StudentID"];
+    $student_sql = "select * from Student st where st.StudentID=" . $row["StudentID"];
     $student_result = $conn->query($section_sql);
     
     while($section_row = $student_result->fetch_assoc()) {
