@@ -27,7 +27,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select Section_ID, Section_Number, i.Instructor_Name, c.Prefix, c.Number from Section s join Instructor i on i.Instructor_ID = s.Instructor_ID join Course c on c.CourseID = s.CourseID";
+$sql = "select SectionID, Section_Number, i.Instructor_Name, c.Prefix, c.Number from Section s join Instructor i on i.InstructorID = s.InstructorID join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
