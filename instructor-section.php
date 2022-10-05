@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select SectionID, Section_Number, Instructor_Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join course c on c.CourseID = s.CourseID where i.InstructorID=" . $iid;
+$sql = "select SectionID, Section_Number, Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join course c on c.CourseID = s.CourseID where i.InstructorID=" . $iid;
 //echo $sql;
     $result = $conn->query($sql);
 
