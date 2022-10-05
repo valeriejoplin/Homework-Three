@@ -8,7 +8,11 @@
   </head>
  <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">University Database</a>
+    <a class="navbar-brand" href="/">
+          <div class="logo-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/OU-Logo.svg/1200px-OU-Logo.svg.png" class="img-fluid">
+      </div>
+      </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
