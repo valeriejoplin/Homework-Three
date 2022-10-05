@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["Section_ID"]?></td>
+    <td><?=$row["SectionID"]?></td>
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
     <td><?=$row["Section_Number"]?></td>
