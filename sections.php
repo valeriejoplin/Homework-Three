@@ -11,6 +11,8 @@ require_once("header.php");
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
+      <th>CourseID</th>
+
     </tr>
   </thead>
   <tbody>
@@ -40,6 +42,8 @@ if ($result->num_rows > 0) {
     <td><?=$row["Number"]?></td>
     <td><?=$row["Section_Number"]?></td>
     <td><?=$row["Instructor_Name"]?></td>
+        <td><?=$row["CourseID"]?></td>
+
   </tr>
 <?php
   }
