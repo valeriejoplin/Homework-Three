@@ -11,7 +11,6 @@ require_once("header.php");
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
-      <th>CourseID</th>
 
     </tr>
   </thead>
@@ -29,7 +28,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select SectionID, Section_Number, i.Name, c.Prefix, c.Number from Section s join Instructor i on i.InstructorID = s.InstructorID join Course c on c.CourseID = s.CourseID";
+$sql = "select SectionID, Section_Number, i.Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -42,7 +41,6 @@ if ($result->num_rows > 0) {
     <td><?=$row["Number"]?></td>
     <td><?=$row["Section_Number"]?></td>
     <td><?=$row["Instructor_Name"]?></td>
-        <td><?=$row["CourseID"]?></td>
 
   </tr>
 <?php
