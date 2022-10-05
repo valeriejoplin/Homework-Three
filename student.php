@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["StudentID"]?></td>  
-    <td><?=$row["Name"]?></td>  
+    <td><a href="student-cards.php?id=<?=$row["StudentID"]?>"><?=$row["Name"]?></a></td>
     <td><?=$row["Major"]?></td>
     <td><?=$row["Minor"]?></td>
     <td><?=$row["GradYear"]?></td>
