@@ -5,7 +5,7 @@ require_once("header.php");
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>CourseID</th>
       <th>Prefix</th>
       <th>Number</th>
       <th>Description</th>
@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["Description"]?></td>
     <td>
     <form method "post" action="sections.php">
-    <input type="hidden" name="id" value="<?=$row["CourseID"]?>"/>
+    <input type="hidden" name="CourseID" value="<?=$row["CourseID"]?>"/>
     <input type="submit" value="View Sections" />
     </form>
     </td>
