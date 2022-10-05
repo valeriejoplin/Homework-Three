@@ -28,8 +28,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$coid = $_POST['id'];
-$sql = "select SectionID, Section_Number, Instructor_Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join Course c on c.CourseID = s.CourseID=" . $coid;
+
+$sql = "select SectionID, Section_Number, Instructor_Name, c.Prefix, c.Number from Sections s join Instructor i on i.InstructorID = s.InstructorID join Course c on c.CourseID = s.CourseID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
