@@ -21,9 +21,9 @@ $username = "valeriej_databaseuser";
 $password = "tI_*dXAL^r[(";
 $dbname = "valeriej_homework3";
 
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
