@@ -30,7 +30,7 @@ $sql = "select SectionID, Section_Number, i.Name, c.Prefix, c.Number from Sectio
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
+ while($row = $result->fetch_assoc()) {
 ?>
   <tr>
     <td><?=$row["SectionID"]?></td>
