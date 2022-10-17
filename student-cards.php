@@ -14,8 +14,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "SELECT * from Student";
+$iid = $_GET['id'];
+$sql = "SELECT * from Student WHERE StudentID=" . $iid;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -26,17 +26,7 @@ if ($result->num_rows > 0) {
     <div class="card-body">
       <h5 class="card-title"><?=$row["Name"]?></h5>
       <p class="card-text"><?=$row["Major"]?><ul>
-<?php
-    $student_sql = "select Name, Major, Minor, GradYear from Student where StudentID=" . $row["StudentID"];
-    $student_result = $conn->query($student_sql);
-    
-    while($student_row = $student_result->fetch_assoc()) {
-      echo "<li>" . $student_row["GradYear"] . "</li>";
-    }
-?>
-      </ul></p>
-  </div>
-    </div>
+
 <?php
   }
 } else {
