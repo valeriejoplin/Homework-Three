@@ -29,7 +29,7 @@ $sql = "select SectionID, Section_Number, i.Name, c.Prefix, c.Number from Sectio
 
     $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result->num_rows>0){
 
   while($row = $result->fetch_assoc()) {
 ?>
@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["SectionID"]?></td>
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
-    <td><?=$row["Section_number"]?></td>
+    <td><?=$row["Section_Number"]?></td>
     <td><?=$row["Instructor_Name"]?></td>
   </tr>
 <?php
