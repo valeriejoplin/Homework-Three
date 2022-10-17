@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
     <div class="card-body">
       <h5 class="card-title"><?=$row["Name"]?></h5>
       <p class="card-text"><?=$row["Major"]?><ul>
+      <p class="card-text"><?=$row["GradYear"]?><ul>
+
 
 <?php
   }
