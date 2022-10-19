@@ -2,7 +2,7 @@
 require_once("header.php");
 ?>
 <body>
-    <h1>Sections by Instructor</h1>
+    <h1>Courses by Instructor</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -26,18 +26,18 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   die("Connection failed: " . $conn->connect_error);
 }
 $iid = $_GET['id'];
-$sql = "Select * from Sections s join Instructor i on i.InstructorID=s.InstructorID Where InstructorID=" . $iid;
+$sql = "Select c.CourseID, c.Prefix, c.Number, c.Description, i.Name from Course c join Instructor i on i.InstructorID=c.InstructorID Where i.InstructorID=" . $iid;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
  while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["SectionID"]?></td>
+    <td><?=$row["CourseID"]?></td>
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
-    <td><?=$row["Section_Number"]?></td>
-    <td><?=$row["Instructor_Name"]?></td>
+    <td><?=$row["Description"]?></td>
+    <td><?=$row["Name"]?></td>
   </tr>
 <?php
   }
