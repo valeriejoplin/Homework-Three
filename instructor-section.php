@@ -26,7 +26,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   die("Connection failed: " . $conn->connect_error);
 }
 $iid = $_GET['id'];
-$sql = "Select * from Course c join Instructor i on i.InstructorID=s.InstructorID Where InstructorID=" . $iid;
+$sql = "Select * from Sections s join Instructor i on i.InstructorID=s.InstructorID Where InstructorID=" . $iid;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
