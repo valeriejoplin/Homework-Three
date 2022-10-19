@@ -9,8 +9,7 @@ require_once("header.php");
       <th>ID</th>
       <th>Prefix</th>
       <th>Number</th>
-      <th>Section</th>
-      <th>Instructor</th>
+      <th>Course Name</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +36,6 @@ if ($result->num_rows > 0) {
     <td><?=$row["Prefix"]?></td>
     <td><?=$row["Number"]?></td>
     <td><?=$row["Description"]?></td>
-    <td><?=$row["Name"]?></td>
   </tr>
 <?php
   }
