@@ -14,7 +14,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iid = $_POST['id'];
+$iid = $_GET['id'];
 $sql = "SELECT * from Student WHERE StudentID=" . $iid;
 $result = $conn->query($sql);
 
